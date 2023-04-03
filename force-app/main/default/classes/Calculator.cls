@@ -19,4 +19,15 @@ public with sharing class Calculator {
 
         return product;
     }
+
+    // Returns the quotient of two integers. Per requirement use the Add method implemented above.
+    public Integer Divide(Integer a, integer b){
+        Integer quotient = 0;
+        Integer dividend = a;
+        while(Add(dividend, -b) >= 0){
+           quotient++;
+           dividend -= b;
+        }
+        return quotient;
+    }
 }
