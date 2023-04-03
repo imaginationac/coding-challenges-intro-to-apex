@@ -21,7 +21,11 @@ public with sharing class Calculator {
     }
 
     // Returns the quotient of two integers. Per requirement use the Add method implemented above.
+    // If the divisor is 0, return 0.
     public Integer Divide(Integer a, integer b){
+        if(b == 0){
+            return 0;
+        }
         Integer quotient = 0;
         Integer dividend = a;
         while(Add(dividend, -b) >= 0){
